@@ -55,6 +55,13 @@ stage('Deploy completed') {
         }
     }
 
+stage('Deploy DONE') {
+        steps{
+            echo "Done"
+        }
+    }
+
+
 stage('Completed') {
         steps{
             echo "Build done!"
