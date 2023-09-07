@@ -51,7 +51,7 @@ pipeline {
     }
 stage('Deploy completed') {
         steps{
-            echo "Deployed to ${DEPLOY_COMPLETED}"
+            echo "Deploy completed"
         }
     }
 
