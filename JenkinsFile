@@ -49,6 +49,11 @@ pipeline {
             echo "Deployed to ${PRODUCTION_ENVIRONMENT}"
         }
     }
+stage('Deploy completed') {
+        steps{
+            echo "Deployed to ${DEPLOY_COMPLETED}"
+        }
+    }
 
 stage('Completed') {
         steps{
