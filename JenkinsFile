@@ -69,5 +69,11 @@ stage('Completed') {
     }
 
 
+stage('Testcomplete') {
+        steps{
+            echo "Build completed!"
+        }
+    }
+
     }
 }
