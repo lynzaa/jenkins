@@ -1,27 +1,27 @@
 pipeline {
-   agent {
+    agent {
         label '!windows'
     }
     
-    environment{
+    environment {
         DIRECTORY_PATH = '/random_url'
         TESTING_ENVIRONMENT = 'Test Env'
         PRODUCTION_ENVIRONMENT = 'Production Env'
     }
 
-    stages{
-        stage('Build') { 
-            steps{
+    stages {
+        stage('Build') {
+            steps {
                 echo "fetch the source code from the directory path specified by the environment variable"
-                echo "fetch the source code from the directory path specified by the environment variable"   
-            }   
+                echo "fetch the source code from the directory path specified by the environment variable"
+            }
         }
     }
 
     post {
-            emailext subject: "Build Status: ${currentBuild.result}", 
-                      body: "Build ${currentBuild.result}: ${env.BUILD_URL}",
-                      attachLog: true,  
-                      to: 'linzalias@gmail.com',
-        }
+        emailext subject: "Build Status: ${currentBuild.result}",
+            body: "Build ${currentBuild.result}: ${env.BUILD_URL}",
+            attachLog: true,
+            to: 'linzalias@gmail.com'
+    }
 }
