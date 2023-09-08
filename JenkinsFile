@@ -9,7 +9,7 @@ pipeline {
         PRODUCTION_ENVIRONMENT = 'Production Env'
     }
 
-    stages {
+    stages { 
         stage('Build') {
             steps {
                 echo "fetch the source code from the directory path specified by the environment variable"
