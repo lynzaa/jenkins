@@ -16,6 +16,58 @@ pipeline {
                 echo "fetch the source code from the directory path specified by the environment variable"
             }
         }
+stage('Test') {
+        // Run the maven build
+        steps{
+            echo "unit tests"
+            echo "integration tests"
+            
+        }
+    }
+    stage('Code Quality Check') {
+        steps{
+        echo "check the quality of the code"
+        }
+    }
+    
+    stage('Deploy') {
+        steps{
+        echo "deploy the application to a testing environment specified by the environment variable"
+        }
+    }
+    
+    stage('Approval') {
+        steps{
+        sleep 10
+        }
+    }
+    
+    stage('Deploy to production') {
+        steps{
+            echo "Deployed to ${PRODUCTION_ENVIRONMENT}"
+        }
+    }
+stage('Deploy completed') {
+        steps{
+            echo "Deploy completed"
+        }
+    }
+
+
+
+
+stage('Completed') {
+        steps{
+            echo "Build done!"
+        }
+    }
+
+
+stage('Testcomplete') {
+        steps{
+            echo "Build completed!"
+        }
+    }
     }
 
     post {
