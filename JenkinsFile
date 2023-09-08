@@ -76,6 +76,6 @@ pipeline {
                       body: "Build ${currentBuild.result}: ${env.BUILD_URL}",
                       attachLog: true,  
                       to: 'linzalias@gmail.com',
-        }}
+        
     }
 }
