@@ -16,7 +16,7 @@ pipeline {
                 echo "fetch the source code from the directory path specified by the environment variable"
             }
         }
-stage('Test') {
+stage('Test') { 
         // Run the maven build
         steps{
             echo "unit tests"
